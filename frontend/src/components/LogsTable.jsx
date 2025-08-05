@@ -18,7 +18,9 @@ function LogsTable() {
     });
 
     axios
-      .get(`http://localhost:5000/api/logs?${queryParams.toString()}`)
+      .get(
+        `https://hrinterfacemonitor.onrender.com/api/logs?${queryParams.toString()}`
+      )
       .then((res) => {
         setLogs(res.data.logs);
         setTotal(res.data.total);
