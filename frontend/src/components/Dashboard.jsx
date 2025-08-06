@@ -32,7 +32,7 @@ function Dashboard() {
     });
 
     axios
-      .get(`https://hrinterfacemonitor.onrender.com/api/logs/summary`)
+      .get(`https://hrinterfacemonitor.onrender.com/api/logs/summary?${queryParams}`)
       .then((res) => setSummary(res.data))
       .catch((err) => console.error(err));
   }, [filters.startDate, filters.endDate]);
